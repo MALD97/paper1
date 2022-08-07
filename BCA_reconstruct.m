@@ -33,6 +33,8 @@ if i>checkpoint
     Dist=20;
     Continue=std(Cost(i-Dist:i))>10;
 end
+% the '10' is the threshold to check whether convergence or not;
+%It can be smaller, then the result will be more accuracy, but iteration will be more;
 end
 H=pinv(W)*pinv(B')*G;
 S=pinv(H)*Y;
